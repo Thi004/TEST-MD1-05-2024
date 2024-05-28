@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cau 2</title>
+</head>
+<body>
+<h4>Câu 2: Viết hàm có tham số truyền vào là một chuỗi các ký tự.Hàm thực hiện đếm số lượng ký
+    tự in hoa trong chuỗi.
+    - Nếu chuỗi có ký tự in hoa hàm trả về số lượng ký tự in hoa có trong chuỗi.
+    - Nếu Chuỗi không chứa các ký tự hoa thì hàm sẽ trả về thông báo "The Strings is not
+    contain upper char"</h4>
+<script>
+    let str = prompt('Nhập vào 1 chuỗi');
+    let upperCount = 0;
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i]
+        if (char >= 'A' && char <= 'Z') {
+            upperCount++;
+            document.write( ' Số ký tự in hoa trong chuỗi là: ' + upperCount)
+        } else {
+            document.write( 'The Strings is not contain upper char')
+        }
+    }
+
+
+</script>
+</body>
+</html>

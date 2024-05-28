@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cau 1</title>
+</head>
+<body>
+<h4>Câu 1: Nhập từ bàn phím mảng số nguyên gồm n phần tử (n<=20). Hiển thị ra màn hình danh
+    sách các phần tử của mảng, hiệu của Tổng các số chẵn và Tổng các số lẻ có trong mảng.</h4>
+<h5>Tạo mảng</h5>
+<input type="number" placeholder="nhập số lượng phần tử" id="n">
+<button onclick="inputArray()">Nhập Mảng</button>
+<br>
+<p id="pt"></p>
+<br>
+<button onclick="getResuft()">Tính</button>
+<p id="kq"></p>
+<script>
+    let arrNum = [];
+
+    function inputArray() {
+        let n = +document.getElementById('n').value;
+        for (let i = 0; i < n; i++) {
+            if (n <= 20) {
+                let pt = +prompt('Nhập phần tử thứ ' + i);
+                arrNum.push(pt)
+            }
+        }
+        document.getElementById('pt').innerHTML = 'các phần tử trong mảng là: ' + arrNum;
+    }
+
+    function getResuft() {
+        let tongchan = 0;
+        let tongle = 0;
+        for (let i = 0; i < arrNum.length; i++) {
+            if (arrNum[i] % 2 === 0) {
+                tongchan = tongchan + arrNum[i];
+            } else {
+                tongle = tongle + arrNum[i];
+            }
+        }
+        document.getElementById('kq').innerHTML = tongchan - tongle;
+    }
+
+
+</script>
+</body>
+</html>
