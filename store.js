@@ -11,6 +11,7 @@ class Store {
         this.listProduct.push(sp2);
     }
 
+
     add(newProduct) {
         this.listProduct.push(newProduct);
     }
