@@ -17,10 +17,13 @@
         let char = str[i]
         if (char >= 'A' && char <= 'Z') {
             upperCount++;
-            document.write( ' Số ký tự in hoa trong chuỗi là: ' + upperCount)
-        } else {
-            document.write( 'The Strings is not contain upper char')
         }
+    }
+    if(upperCount === 0){
+        document.write( 'The Strings is not contain upper char')
+    }
+    else {
+        document.write( ' Số ký tự in hoa trong chuỗi là: ' + upperCount)
     }
 
 
